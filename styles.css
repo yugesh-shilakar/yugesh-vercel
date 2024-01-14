@@ -522,6 +522,8 @@ main {
 
 .experience__details h3 {
   margin-top: 0;
+  min-width: 80%;
+  max-width: 80%;
 }
 
 .experience__company {

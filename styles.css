@@ -255,8 +255,6 @@ main {
 .nav__hamburger {
   display: none;
   width: 1em;
-  
-  
 }
 
 .about {
@@ -298,16 +296,10 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: 2em;
   /* display: inline-block; */
-
 }
-  /* test */
+/* test */
 
-
-
-  /* test */
-
-
-
+/* test */
 
 .project {
   padding: 2em;
@@ -315,15 +307,10 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
-  
 
   /* test */
 
-  
-
   /* test */
-
-
 }
 
 .project:hover {
@@ -331,7 +318,6 @@ main {
 }
 
 .project__description {
-  
   margin-top: 1em;
 }
 
@@ -392,7 +378,6 @@ main {
   transition: transform 0.2s ease-in-out;
 }
 
-
 @media (max-width: 600px) {
   .header {
     height: 6em;
@@ -448,7 +433,6 @@ main {
   .portfolio-container {
     margin-top: 1em; /* Add margin to separate the image and text */
   }
-  
 }
 
 /* Add some basic styling for your container */
@@ -547,7 +531,5 @@ main {
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
 }
-
-
 
 /* test */

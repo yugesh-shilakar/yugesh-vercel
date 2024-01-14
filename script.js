@@ -10,6 +10,10 @@ const addThemeClass = (bodyClass, btnClass) => {
 
 const getBodyTheme = localStorage.getItem('portfolio-theme');
 const getBtnTheme = localStorage.getItem('portfolio-btn-theme');
+let lastToggledImage = localStorage.getItem('last-toggled-image') || 'img/pic2.png';
+
+// Set the initial image source during page load
+portfolioImage.src = lastToggledImage;
 
 addThemeClass(getBodyTheme, getBtnTheme);
 
@@ -25,7 +29,9 @@ const setTheme = (bodyClass, btnClass) => {
   localStorage.setItem('portfolio-btn-theme', btnClass);
 
   // Change the image source based on the current theme
-  portfolioImage.src = isDark() ? 'img/pic3.png' : 'img/pic2.png';
+  lastToggledImage = isDark() ? 'img/pic3.png' : 'img/pic2.png';
+  portfolioImage.src = lastToggledImage;
+  localStorage.setItem('last-toggled-image', lastToggledImage);
 };
 
 const toggleTheme = () => (isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun'));

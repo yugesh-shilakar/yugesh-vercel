@@ -243,6 +243,9 @@ main {
 .nav__list {
   margin-right: 1.5em;
   display: flex;
+  position: relative;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 .nav__list-item {
@@ -252,6 +255,8 @@ main {
 .nav__hamburger {
   display: none;
   width: 1em;
+  
+  
 }
 
 .about {
@@ -389,10 +394,12 @@ main {
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
+    z-index: 2;
   }
 
   .display-nav-list {
     width: 100%;
+    height: auto;
   }
 
   .nav__list-item {
@@ -402,6 +409,8 @@ main {
   .nav__hamburger {
     display: flex;
     margin-left: 0.8em;
+    cursor: pointer;
+    z-index: 3; /* Set a higher z-index */
   }
 
   .about {
@@ -416,6 +425,9 @@ main {
 
   .scroll-container {
     display: none;
+  }
+  .portfolio-container {
+    margin-top: 1em; /* Add margin to separate the image and text */
   }
   
 }

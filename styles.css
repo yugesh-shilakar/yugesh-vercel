@@ -297,7 +297,17 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: 2em;
+  /* display: inline-block; */
+
 }
+  /* test */
+
+
+
+  /* test */
+
+
+
 
 .project {
   padding: 2em;
@@ -305,6 +315,15 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  
+
+  /* test */
+
+  
+
+  /* test */
+
+
 }
 
 .project:hover {
@@ -459,5 +478,74 @@ main {
 }
 
 /* test*/
+
+/* Experience Section Styles */
+.experience__timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.experience__dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  margin-right: 20px;
+  align-self: center;
+}
+
+.experience__date {
+  width: 120px;
+  text-align: center; /* Center-align the date */
+  color: var(--clr-primary);
+  font-weight: bold;
+  justify-content: c;
+}
+
+.experience__details {
+  flex-grow: 1;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.experience__details:hover {
+  transform: translateY(-5px);
+}
+
+.experience__details h3 {
+  margin-top: 0;
+}
+
+.experience__company {
+  font-weight: 500;
+  color: var(--clr-fg-alt);
+}
+
+.experience__details .project__description {
+  margin-top: 1em;
+}
+
+.experience__details .project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.2em 0;
+}
+
+.experience__details .project__stack-item {
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+
 
 /* test */

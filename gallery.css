@@ -1,0 +1,213 @@
+/* Add your styles here */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Gallery Styles */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Styles */
+.about__desc {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Styles */
+.contact {
+    padding: 2em 0;
+}
+
+/*test*/
+
+
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add these styles to your existing CSS */
+
+.nav__list-item.active {
+    border-bottom: 3px solid var(--clr-primary); /* Highlight the active link */
+}
+
+.section {
+    display: none;
+}
+
+/* Update the style for the active section */
+.section.active {
+    display: block;
+}
+
+/* Additional styles for better visibility */
+
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list-item {
+    margin-right: 10px;
+}
+
+/* Add these styles to maintain consistent spacing for gallery items */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery__item img:hover {
+    transform: scale(1.05);
+}
+/* ... */
+@media screen and (max-width: 600px) {
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-bg);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav__list.active {
+        display: flex;
+    }
+
+    .nav__list-item {
+        padding: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+}
+/* ... Your existing styles ... */
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 2em; /* Adjust top margin for consistency */
+  }
+  .gallery__item {
+    position: relative;
+    overflow: hidden;
+     /* Set a fixed height for portrait mode */
+  }
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  
+  
+  /* Add a media query for smaller screens (adjust the max-width as needed) */
+  @media (max-width: 600px) {
+    .gallery__grid {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      margin-top: 1em; /* Adjust top margin for consistency on smaller screens */
+    }
+  }
+  
+  /* ... Your existing styles ... */
+  
+/* ... */
+#btn-theme{
+    margin-left: 20px;
+}
+
+
+
+/* modal */
+/* Add this CSS for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .close {
+    background-color: unset;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #e74c3c; /* Change to your desired hover color */
+  }
+  
+  /* Add this CSS for handling landscape images */
+  @media only screen and (orientation: landscape) {
+    .modal-content {
+      max-height: 100%;
+    }
+  }
+  
+  
+
+
+
+

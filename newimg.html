@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Wallpaper Gallery" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="sty.css" />
+    <title>Yugesh's Gallery</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="index.html" class="link">Yugesh's Gallery</a>
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a
+              class="link link--nav"
+              href="javascript:void(0);"
+              onclick="showSection('gallery')"
+              >Photography</a
+            >
+          </li>
+          <li class="nav__list-item">
+            <a
+              class="link link--nav"
+              href="javascript:void(0);"
+              onclick="showSection('digitalArts')"
+              >Digital Arts</a
+            >
+          </li>
+          <li class="nav__list-item">
+            <a
+              class="link link--nav"
+              href="javascript:void(0);"
+              onclick="showSection('arts')"
+              >Arts</a
+            >
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+          id="hamburger-btn"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+
+
+
+    <div class="gallery">
+
+        <div>
+            <image src="gallery/photography/bijyasa.jpg" alt=""></image>
+        </div>
+
+        <div>
+            <image src="gallery/photography/lakhe.jpg" alt=""></image>
+        </div>
+
+        <div>
+            <image src="gallery/photography/sasambu.jpg" alt=""></image>
+        </div>
+
+        <div>
+            <image src="gallery/photography/light.jpg" alt=""></image>
+        </div>
+
+        <div>
+            <image src="gallery/photography/swayambhu side.jpeg" alt=""></image>
+        </div>
+
+        <div>
+            <image src="gallery/photography/patan night.jpg" alt=""></image>
+        </div>
+
+    </div>
+
+
+
+
+
+    
+
+    <footer class="footer">
+      <a href="https://github.com/yourusername" class="link footer__link">
+        Created By Yugesh Raj Shilakar
+      </a>
+    </footer>
+    
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./gallery.js"></script>
+
+    
+  </body>
+</html>

@@ -1,165 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Wallpaper Gallery" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="gallery.css" />
-    <title>Yugesh's Gallery</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="index.html" class="link">Yugesh's Gallery</a>
-      </h3>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a
-              class="link link--nav"
-              href="javascript:void(0);"
-              onclick="showSection('gallery')"
-              >Photography</a
-            >
-          </li>
-          <li class="nav__list-item">
-            <a
-              class="link link--nav"
-              href="javascript:void(0);"
-              onclick="showSection('digitalArts')"
-              >Digital Arts</a
-            >
-          </li>
-          <li class="nav__list-item">
-            <a
-              class="link link--nav"
-              href="javascript:void(0);"
-              onclick="showSection('arts')"
-              >Arts</a
-            >
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/ip1.png" type="image/x-icon" />
+  <meta name="description" content="Wallpaper Gallery" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+  <title>Yugesh's Gallery</title>
+</head>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+<body class="light" id="top">
+  <header class="header center">
+    <h3>
+      <a href="index.html" class="link">Yugesh's Gallery</a>
+    </h3>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-          id="hamburger-btn"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="index.html">Homepage</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="javascript:void(0);" onclick="showSection('gallery')">Photography</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="javascript:void(0);" onclick="showSection('digitalArts')">Digital Arts</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="javascript:void(0);" onclick="showSection('arts')">Arts</a>
+        </li>
+      </ul>
 
-    <main>
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage">
-          </div>
-      <!-- Gallery -->
-      <section id="gallery" class="section gallery">
-        <h2 class="section__title">Photography</h2>
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
 
-        <div class="gallery__grid">
-          <!-- Add your images dynamically here -->
-          <div class="gallery__item" onclick="openModal('gallery/photography/pulukisi.jpg')">
-            <img src="gallery/photography/pulukisi.jpg" alt="Wallpaper 1" />
-          </div>
-          
-          <div class="gallery__item" onclick="openModal('gallery/photography/taleju.jpg')">
-            <img src="gallery/photography/taleju.jpg" alt="Wallpaper 2" />
-          </div>
-          <div class="gallery__item" onclick="openModal('gallery/photography/patan night.jpg')">
-            <img src="gallery/photography/patan night.jpg" alt="Wallpaper 2" />
-          </div>
-          <div class="gallery__item" onclick="openModal('gallery/photography/lakuri.jpg')">
-            <img src="gallery/photography/lakuri.jpg" alt="Wallpaper 2" />
-          </div>
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger" id="hamburger-btn">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <a class="modal-btn prev" onclick="plusSlides(-1, 'gallery')">&#10094;</a>
+      <img class="modal-content" id="modalImage" />
+      <!-- Next and Previous buttons -->
+
+      <a class="modal-btn next" onclick="plusSlides(1, 'gallery')">&#10095;</a>
 
 
+    </div>
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery">
+      <h2 class="section__title">Photography</h2>
 
-
-
-
-
-
-          <!-- Add more items as needed -->
+      <div class="gallery__grid">
+        <!-- Add your images dynamically here -->
+        <div class="gallery__item" onclick="openModal('gallery/photography/pulukisi.jpg')">
+          <img loading="lazy" src="gallery/photography/pulukisi.jpg" alt="Wallpaper 1" />
         </div>
-      </section>
 
-      <!-- Digital Arts -->
-      <section id="digitalArts" class="section about">
-        <h2 class="section__title">Digital Arts</h2>
-        <div class="gallery__grid">
-          <!-- Add your images dynamically here -->
-          <div class="gallery__item">
-            <img src="img/pic.jpg" alt="Wallpaper 1" />
-          </div>
-          <div class="gallery__item">
-            <img src="img/pic2.png" alt="Wallpaper 2" />
-          </div>
-          <!-- Add more items as needed -->
+        <div class="gallery__item" onclick="openModal('gallery/photography/taleju.jpg')">
+          <img loading="lazy" src="gallery/photography/taleju.jpg" alt="Wallpaper 2" />
         </div>
-      </section>
-
-      <!-- Arts -->
-
-      <section id="arts" class="section about">
-        <h2 class="section__title">Arts</h2>
-        <div class="gallery__grid">
-          <!-- Add your images dynamically here -->
-          <div class="gallery__item">
-            <img src="img/pic.jpg" alt="Wallpaper 1" />
-          </div>
-          <div class="gallery__item">
-            <img src="img/pic2.png" alt="Wallpaper 2" />
-          </div>
-          <!-- Add more items as needed -->
+        <div class="gallery__item" onclick="openModal('gallery/photography/patan night.jpg')">
+          <img loading="lazy" src="gallery/photography/patan night.jpg" alt="Wallpaper 2" />
         </div>
-      </section>
+        <div class="gallery__item" onclick="openModal('gallery/photography/lakuri.jpg')">
+          <img loading="lazy" src="gallery/photography/lakuri.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/bauda lamp.jpg')">
+          <img loading="lazy" src="gallery/photography/bauda lamp.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/bijyasa.jpg')">
+          <img loading="lazy" src="gallery/photography/bijyasa.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/bijeswori in.jpg')">
+          <img loading="lazy" src="gallery/photography/bijeswori in.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/baudha flag.jpg')">
+          <img loading="lazy" src="gallery/photography/baudha flag.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/dhama.jpg')">
+          <img loading="lazy" src="gallery/photography/dhama.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/ason moon.jpg')">
+          <img loading="lazy" src="gallery/photography/ason moon.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/ason.jpg')">
+          <img loading="lazy" src="gallery/photography/ason.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/gueswori.jpg')">
+          <img loading="lazy" src="gallery/photography/gueswori.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174516.jpg')">
+          <img src="gallery/photography/IMG_20230616_174506.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/light.jpg')">
+          <img loading="lazy" src="gallery/photography/light.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20200316_140513-01.jpg')">
+          <img src="gallery/photography/IMG_20200316_140513-01.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174655.jpg')">
+          <img src="gallery/photography/IMG_20230616_174655.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174357.jpg')">
+          <img src="gallery/photography/IMG_20230616_174357.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174638.jpg')">
+          <img src="gallery/photography/IMG_20230616_174638.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230219_120916 (1).jpg')">
+          <img src="gallery/photography//IMG_20230219_120916 (1).jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174625.jpg')">
+          <img src="gallery/photography/IMG_20230616_174625.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174615.jpg')">
+          <img src="gallery/photography/IMG_20230616_174615.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174551.jpg')">
+          <img src="gallery/photography/IMG_20230616_174551.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_173908.jpg')">
+          <img src="gallery/photography/IMG_20230616_173908.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174539.jpg')">
+          <img src="gallery/photography/IMG_20230616_174539.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/photography/IMG_20230616_174315.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/light.jpgIMG_20230616_174331.jpg')">
+          <img src="gallery/photography/IMG_20230616_174331.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174357.jpg')">
+          <img src="gallery/photography/IMG_20230616_174357.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174452.jpg')">
+          <img src="gallery/photography/IMG_20230616_174452.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item"
+          onclick="openModal('gallery/photography/LMC_20230413_184855_𝑻𝒉𝒆_𝑴𝒂𝒏𝒖𝒂𝒍_𝒌𝒊𝒏𝒈𝒔_𝑷𝒖𝒓𝒆_𝑵𝒂𝒕𝒖𝒓𝒆𝒍_𝑳𝒎𝒄8_4🤳🧍🌿𝒃𝒚_𝑨𝒍_𝑨𝒎𝒊𝒏 (1) (1)-01.jpeg')">
+          <img
+            src="gallery/photography/LMC_20230413_184855_𝑻𝒉𝒆_𝑴𝒂𝒏𝒖𝒂𝒍_𝒌𝒊𝒏𝒈𝒔_𝑷𝒖𝒓𝒆_𝑵𝒂𝒕𝒖𝒓𝒆𝒍_𝑳𝒎𝒄8_4🤳🧍🌿𝒃𝒚_𝑨𝒍_𝑨𝒎𝒊𝒏 (1) (1)-01.jpeg"
+            alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/lakhe.jp')">
+          <img loading="lazy" src="gallery/photography/lakhe.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/rainy sq.jpg')">
+          <img loading="lazy" src="gallery/photography/rainy sq.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/PXL_20221227_095750733 (1).jpg')">
+          <img src="gallery/photography/PXL_20221227_095750733 (1).jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/janbahal.jpg')">
+          <img loading="lazy" src="gallery/photography/janbahal.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/janba dyo.jpg')">
+          <img loading="lazy" src="gallery/photography/janba dyo.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/old.jpg')">
+          <img loading="lazy" src="gallery/photography/old.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/kalinchok.jpg')">
+          <img loading="lazy" src="gallery/photography/kalinchok.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/sasambu.jpg')">
+          <img loading="lazy" src="gallery/photography/sasambu.jpg" alt="Wallpaper 2" />
+        </div>
 
-      <!-- Contact -->
-      <section id="contact" class="section contact center">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:your.email@example.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <a href="https://github.com/yourusername" class="link footer__link">
-        Created By Yugesh Raj Shilakar
-      </a>
-    </footer>
-
-    <div class="scroll-container">
-      <div class="scroll-top">
-        <a aria-label="Scroll up" href="#top">
-          <i aria-hidden="true" class="fas fa-arrow-up"></i>
-        </a>
+        <!-- Add more items as needed -->
       </div>
+    </section>
+
+    <!-- Digital Arts -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <a class="modal-btn prev" onclick="plusSlides(-1, 'digitalArts')">&#10094;</a>
+      <img class="modal-content" id="modalImage" />
+      <!-- Next and Previous buttons -->
+
+      <a class="modal-btn next" onclick="plusSlides(1, 'digitalArts')">&#10095;</a>
+
+
     </div>
 
-    <script src="./script.js"></script>
-    <script src="./gallery.js"></script>
+    <section id="digitalArts" class="section about">
+      <h2 class="section__title">Digital Arts</h2>
+      <div class="gallery__grid">
+        <!-- Add your images dynamically here -->
+        <div class="gallery__item" onclick="openModal('gallery/arts/amir.jpg')">
+          <img loading="lazy" src="gallery/arts/amir.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/depression.jpg')">
+          <img src="gallery/arts/depression.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/kali.jpg')">
+          <img src="gallery/arts/kali.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/kartik nach.jpg')">
+          <img src="gallery/arts/kartik nach.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/lakhey.jpg')">
+          <img src="gallery/arts/lakhey.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/malice.jpg')">
+          <img src="gallery/arts/malice.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/pranish.jpg')">
+          <img src="gallery/arts/pranish.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/prem dhoj pradhan.jpg')">
+          <img src="gallery/arts/prem dhoj pradhan.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/satyamohanjoshi.jpg')">
+          <img src="gallery/arts/satyamohanjoshi.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/rabindra.jpg')">
+          <img src="gallery/arts/rabindra.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/Untitled-2.jpg')">
+          <img src="gallery/arts/Untitled-2.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/arts/vicious.jpg')">
+          <img src="gallery/arts/vicious.jpg" alt="Wallpaper 2" />
+        </div>
+  
+        <!-- Add more items as needed -->
+      </div>
+    </section>
 
-    
-  </body>
+    <!-- Arts -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <a class="modal-btn prev" onclick="plusSlides(-1, 'arts')">&#10094;</a>
+      <img class="modal-content" id="modalImage" />
+      <!-- Next and Previous buttons -->
+
+      <a class="modal-btn next" onclick="plusSlides(1, '')">&#10095;</a>
+
+
+    </div>
+
+    <section id="arts" class="section about">
+      <h2 class="section__title">Arts</h2>
+      <div class="gallery__grid">
+        <!-- Add your images dynamically here -->
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174615.jpg')">
+          <img src="gallery/paintings/boat.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174551.jpg')">
+          <img src="gallery/paintings/bug.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_173908.jpg')">
+          <img src="gallery/paintings/chester.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174539.jpg')">
+          <img src="gallery/paintings/corey.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/eddie.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/forever27.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/ganesh.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/ironman.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/james.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/kumari.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/kurt1.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/tara.jpg" alt="Wallpaper 2" />
+        </div>
+        <div class="gallery__item" onclick="openModal('gallery/photography/IMG_20230616_174315.jpg')">
+          <img src="gallery/paintings/tiger.jpg" alt="Wallpaper 2" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact center">
+      <h2 class="section__title">Contact</h2>
+      <a href="mailto:your.email@example.com">
+        <span class="btn btn--outline">Email me</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://github.com/yourusername" class="link footer__link">
+      Created By Yugesh Raj Shilakar
+    </a>
+  </footer>
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="./sct.js"></script>
+  <script src="./gallery.js"></script>
+</body>
+
 </html>

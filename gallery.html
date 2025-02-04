@@ -236,7 +236,7 @@
         <div class="gallery__item" onclick="openModal('gallery/arts/vicious.jpg')">
           <img src="gallery/arts/vicious.jpg" alt="Wallpaper 2" />
         </div>
-  
+
         <!-- Add more items as needed -->
       </div>
     </section>
@@ -324,6 +324,24 @@
 
   <script src="./sct.js"></script>
   <script src="./gallery.js"></script>
+  <script>
+    const images = document.querySelectorAll('img[data-src]');
+    const loadImage = (img) => {
+      img.src = img.dataset.src;
+      img.onload = () => img.removeAttribute('data-src');
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    images.forEach((img) => observer.observe(img));
+  </script>
 </body>
 
 </html>

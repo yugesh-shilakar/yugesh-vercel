@@ -64,65 +64,65 @@ document.addEventListener('scroll', scrollUp);
 
 
 
-// //
-// document.addEventListener('DOMContentLoaded', function () {
-//   // ... (your existing code)
+//
+document.addEventListener('DOMContentLoaded', function () {
+  // ... (your existing code)
 
-//   let slideIndexGallery = 1;
-//   let slideIndexDigitalArts = 1;
-//   let slideIndexArts = 1;
+  let slideIndexGallery = 1;
+  let slideIndexDigitalArts = 1;
+  let slideIndexArts = 1;
 
-//   function plusSlides(n, category) {
-//     showSlides((category === 'gallery') ? (slideIndexGallery += n) :
-//                (category === 'digitalArts') ? (slideIndexDigitalArts += n) :
-//                (category === 'arts') ? (slideIndexArts += n) : 1, category);
-//   }
+  function plusSlides(n, category) {
+    showSlides((category === 'gallery') ? (slideIndexGallery += n) :
+               (category === 'digitalArts') ? (slideIndexDigitalArts += n) :
+               (category === 'arts') ? (slideIndexArts += n) : 1, category);
+  }
 
-//   function currentSlide(n, category) {
-//     showSlides((category === 'gallery') ? (slideIndexGallery = n) :
-//                (category === 'digitalArts') ? (slideIndexDigitalArts = n) :
-//                (category === 'arts') ? (slideIndexArts = n) : 1, category);
-//   }
+  function currentSlide(n, category) {
+    showSlides((category === 'gallery') ? (slideIndexGallery = n) :
+               (category === 'digitalArts') ? (slideIndexDigitalArts = n) :
+               (category === 'arts') ? (slideIndexArts = n) : 1, category);
+  }
 
-//   function showSlides(n, category) {
-//     const images = document.querySelectorAll(`.${category}__item`);
-//     let currentIndex;
-//     switch (category) {
-//       case 'gallery':
-//         currentIndex = slideIndexGallery;
-//         break;
-//       case 'digitalArts':
-//         currentIndex = slideIndexDigitalArts;
-//         break;
-//       case 'arts':
-//         currentIndex = slideIndexArts;
-//         break;
-//       default:
-//         currentIndex = 1;
-//     }
+  function showSlides(n, category) {
+    const images = document.querySelectorAll(`.${category}__item`);
+    let currentIndex;
+    switch (category) {
+      case 'gallery':
+        currentIndex = slideIndexGallery;
+        break;
+      case 'digitalArts':
+        currentIndex = slideIndexDigitalArts;
+        break;
+      case 'arts':
+        currentIndex = slideIndexArts;
+        break;
+      default:
+        currentIndex = 1;
+    }
 
-//     if (n > images.length) {
-//       currentIndex = 1;
-//     }
-//     if (n < 1) {
-//       currentIndex = images.length;
-//     }
+    if (n > images.length) {
+      currentIndex = 1;
+    }
+    if (n < 1) {
+      currentIndex = images.length;
+    }
 
-//     // Update the appropriate slide index based on the category
-//     switch (category) {
-//       case 'gallery':
-//         slideIndexGallery = currentIndex;
-//         break;
-//       case 'digitalArts':
-//         slideIndexDigitalArts = currentIndex;
-//         break;
-//       case 'arts':
-//         slideIndexArts = currentIndex;
-//         break;
-//       default:
-//         break;
-//     }
+    // Update the appropriate slide index based on the category
+    switch (category) {
+      case 'gallery':
+        slideIndexGallery = currentIndex;
+        break;
+      case 'digitalArts':
+        slideIndexDigitalArts = currentIndex;
+        break;
+      case 'arts':
+        slideIndexArts = currentIndex;
+        break;
+      default:
+        break;
+    }
 
-//     modalImage.src = images[currentIndex - 1].firstElementChild.src;
-//   }
-// });
+    modalImage.src = images[currentIndex - 1].firstElementChild.src;
+  }
+});

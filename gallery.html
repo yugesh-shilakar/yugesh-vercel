@@ -42,13 +42,13 @@
       </button>
 
       <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger" id="hamburger-btn">
-        <i aria-hidden="true" class="fas fa-bars"></i>
+        <i aria-hidden="true" class="fas fa-bars" style="z-index: 0;"></i>
       </button>
     </nav>
   </header>
 
   <main>
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="z-index: 3;">
       <span class="close" onclick="closeModal()">&times;</span>
       <a class="modal-btn prev" onclick="plusSlides(-1, 'gallery')">&#10094;</a>
       <img class="modal-content" id="modalImage" />

@@ -463,73 +463,28 @@ main {
 
 /* test*/
 
-/* Experience Section Styles */
-.experience__timeline {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
-.experience__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2em;
-}
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .experience__item {
+    padding: 0.8em;
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
 
-.experience__dot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--clr-primary);
-  border-radius: 50%;
-  margin-right: 20px;
-  align-self: center;
-}
+  .experience__details h3 {
+    font-size: 1.1rem;
+  }
 
-.experience__date {
-  width: 120px;
-  text-align: center; /* Center-align the date */
-  color: var(--clr-primary);
-  font-weight: bold;
-  justify-content: c;
-}
+  .experience__company {
+    font-size: 0.85rem;
+  }
 
-.experience__details {
-  flex-grow: 1;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
-  padding: 1em;
-  border-radius: 8px;
-}
+  .experience__details .project__description {
+    font-size: 0.85rem;
+  }
 
-.experience__details:hover {
-  transform: translateY(-5px);
+  .experience__details .project__stack-item {
+    font-size: 0.75rem;
+  }
 }
-
-.experience__details h3 {
-  margin-top: 0;
-  min-width: 80%;
-  max-width: 80%;
-}
-
-.experience__company {
-  font-weight: 500;
-  color: var(--clr-fg-alt);
-}
-
-.experience__details .project__description {
-  margin-top: 1em;
-}
-
-.experience__details .project__stack {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1.2em 0;
-}
-
-.experience__details .project__stack-item {
-  margin: 0.5em;
-  font-weight: 500;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
-}
-
-/* test */
